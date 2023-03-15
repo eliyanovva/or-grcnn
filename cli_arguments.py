@@ -109,6 +109,13 @@ class ModelingParser(argparse.ArgumentParser):
         )
 
         self.add_argument(
+            '--generate_data',
+            help = 'The flag generates the matrix data necessary for model training',
+            type = bool,
+            default = True
+        )
+
+        self.add_argument(
             '--model',
             help = 'Specifies the type of model to be used. Choose between "cnn", "gnn", or "rf".\
                 If rf_mode or gnn_mode is declared this argument is unnecessary.'

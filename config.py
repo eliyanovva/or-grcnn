@@ -32,7 +32,7 @@ MAIN_PACKAGE_DIR = os.path.abspath(os.curdir)
 #final directory in filepath
 last_dir = os.path.split(os.path.abspath(os.curdir))[-1]
 #ensures the final directory is project-protein-fold
-while last_dir != "ppp":
+while last_dir != "or-grcnn":
     os.chdir("..")
     MAIN_PACKAGE_DIR = os.path.abspath(os.curdir)
     last_dir = os.path.split(MAIN_PACKAGE_DIR)[-1]

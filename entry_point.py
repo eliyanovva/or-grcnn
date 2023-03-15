@@ -109,6 +109,11 @@ def ppp():
     parser.setup_arguments()
     args = parser.parse_args()
 
+    if args.generate_data:
+        data_generator.generateLigandMatrices()
+        data_generator.generateProteinMatrices()
+
+
     if  (args.gnn_mode) or (args.model == 'gnn'):
         classification = args.gnn_cl is True
         if args.gnn_mode == 'eval_tuple':
@@ -182,8 +187,4 @@ def ppp():
                 classification=classification,
                 oversampling=args.oversampling)
 
-
-
-#data_generator.generateLigandMatrices()
-#data_generator.generateProteinMatrices()
 ppp()
