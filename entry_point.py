@@ -110,6 +110,10 @@ def ppp():
     args = parser.parse_args()
 
     if args.generate_data:
+        os.mkdir(os.path.join(os.curdir, 'graph_cnn', 'data_prep', 'mol_adjacency_data'))
+        os.mkdir(os.path.join(os.curdir, 'graph_cnn', 'data_prep', 'mol_feature_data'))
+        os.mkdir(os.path.join(os.curdir, 'graph_cnn', 'data_prep', 'pdb_adjacency_data'))
+        os.mkdir(os.path.join(os.curdir, 'graph_cnn', 'data_prep', 'pdb_features_data'))
         data_generator.generateLigandMatrices()
         data_generator.generateProteinMatrices()
 
